@@ -78,7 +78,7 @@ function renderInline(text: string): (string | ReactElement)[] {
 
 export function SimpleMarkdown({ content }: { content: string }) {
   const lines = content.replace(/\r\n/g, '\n').split('\n')
-  const blocks: JSX.Element[] = []
+  const blocks: ReactElement[] = []
 
   let idx = 0
   while (idx < lines.length) {
