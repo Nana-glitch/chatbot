@@ -25,7 +25,7 @@ export async function ocrIfConfigured(options: {
   if (!isProbablyImageMime(mimeType) && !isPdfMime(mimeType)) return null
 
   const form = new FormData()
-  const blob = new Blob([buffer], { type: mimeType })
+  const blob = new Blob([new Uint8Array(buffer)], { type: mimeType })
   form.append('file', blob, options.filename ?? 'file')
   form.append('language', 'rus+eng')
   form.append('isOverlayRequired', 'false')
