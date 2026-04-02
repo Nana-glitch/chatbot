@@ -10,7 +10,7 @@ interface PendingAttachment {
   id: string
   filename: string
   type: 'image' | 'pdf' | 'doc'
-  url?: string | null
+  url?: string
   extractedTextChars?: number
 }
 
