@@ -26,7 +26,7 @@ export interface Attachment {
   storage_path: string
   filename: string
   size_bytes: number
-  url?: string | null
+  url?: string
   extracted_text?: string
   created_at: string
 }
