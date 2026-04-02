@@ -1,7 +1,7 @@
-import { Fragment } from 'react'
+import { Fragment, type ReactElement } from 'react'
 
-function renderInline(text: string): (string | JSX.Element)[] {
-  const out: (string | JSX.Element)[] = []
+function renderInline(text: string): (string | ReactElement)[] {
+  const out: (string | ReactElement)[] = []
   let i = 0
 
   function pushString(s: string) {
